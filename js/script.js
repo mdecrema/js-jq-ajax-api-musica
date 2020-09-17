@@ -7,7 +7,7 @@ $(document).ready(function() {
     url: "https://flynn.boolean.careers/exercises/api/array/music",
     method: "GET",
     success: function (data, stato) {
-      var caratteristiche = data.results;
+      var caratteristiche = data.response;
       /*for (i=0; i<caratteristiche.length; i++) {
         var autore = caratteristiche[i].author;*/
       datiBrano(caratteristiche);
@@ -25,9 +25,9 @@ function datiBrano(songs) {
 
     var cd = {
       "cd": "cd",
-      "author": canzone.author;
-      "title": canzone.title;
-      "year": canzone.year;
+      "author": canzone.author,
+      "title": canzone.title,
+      "year": canzone.year
     }
 
     var source = $("#entry-template").html();
