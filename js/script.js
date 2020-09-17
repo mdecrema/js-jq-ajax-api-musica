@@ -21,7 +21,21 @@ $(document).ready(function() {
 
 function datiBrano(songs) {
   for (i=0; i<=songs.length; i++) {
-    console.log(songs[i]);
+    let canzone = songs[i];
+
+    var cd = {
+      "cd": "cd",
+      "titolo": "title",
+      "autore": "author",
+      "anno": "year"
+    }
+
+    var source = $("#entry-template").html();
+    var template = Handlebars.compile(source);
+
+    var contenuto = template(cd);
+
+    $(".cds-container").append(contenuto);
   }
 }
 
