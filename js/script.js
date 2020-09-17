@@ -25,9 +25,9 @@ function datiBrano(songs) {
 
     var cd = {
       "cd": "cd",
-      "titolo": "title",
-      "autore": "author",
-      "anno": "year"
+      "author": canzone.author;
+      "title": canzone.title;
+      "year": canzone.year;
     }
 
     var source = $("#entry-template").html();
