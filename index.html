@@ -12,6 +12,15 @@
         <header>
             <div class="container">
                 <img src="logo.png" alt="logo" />
+                <div class="generiMusicali">
+                  <select id="genere" class="">
+                    <option value="0">--Scegli Genere--</option>
+                    <option value="1">Pop</option>
+                    <option value="2">Rock</option>
+                    <option value="3">Metal</option>
+                    <option value="4">Jazz</option>
+                  </select>
+                </div>
             </div>
         </header>
 
@@ -28,8 +37,7 @@
         <!-- Template -->
         <script id="entry-template" type="text/x-handlebars-template">
 
-        <div class={{cd}}>
-
+        <div class={{cd}} data-gen={{genre}}>
           <img src="{{img}}" alt="">
           <h3>{{title}}</h3>
           <span class="author">{{author}}</span>

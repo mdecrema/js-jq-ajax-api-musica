@@ -5,6 +5,7 @@ $(document).ready(function() {
     method: "GET",
     success: function (data, stato) {
       var caratteristiche = data.response;
+      console.log(caratteristiche);
       // Richiamo la funzione 'datiBrano' e gli passo l'argomento
       datiBrano(caratteristiche);
     },
@@ -24,7 +25,8 @@ function datiBrano(songs) {
       "img": canzone.poster,
       "author": canzone.author,
       "title": canzone.title,
-      "year": canzone.year
+      "year": canzone.year,
+      "genre": canzone.genre
     }
 
 // Vado a inserire tutto nel tamplate e lo invio all'html
@@ -34,10 +36,18 @@ function datiBrano(songs) {
     var contenuto = template(cd);
 
     $(".cds-container").append(contenuto);
+
+    // Generi Musicali
+    $(document).on("click", ".cd", function() {
+      var x = $(this).attr("data-gen");
+      console.log(x);
+    });
+
+
+
+
   }
 }
-
-
 
 
 
