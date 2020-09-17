@@ -7,11 +7,11 @@ $(document).ready(function() {
     url: "https://flynn.boolean.careers/exercises/api/array/music",
     method: "GET",
     success: function (data, stato) {
-      var caratteristiche = data.response;
-      for (i=0; i<caratteristiche.length; i++) {
-        var autore = caratteristiche[i].author;
-        console.log(autore);
-      }
+      var caratteristiche = data.results;
+      /*for (i=0; i<caratteristiche.length; i++) {
+        var autore = caratteristiche[i].author;*/
+        console.log(caratteristiche);
+
     },
     error: function (richiesta, stato, errori) {
       alert("Errore: "+errori);
@@ -19,19 +19,9 @@ $(document).ready(function() {
   })
 
 
-  var cd = {
-    "cd": "cd",
-    "titolo": "title",
-    "autore": "author",
-    "anno": "year"
-  }
+function datiBrano(songs) {
 
-  var source = $("#entry-template").html();
-  var template = Handlebars.compile(source);
-
-  var contenuto = template(cd);
-
-  $(".cds-container").append(contenuto);
+}
 
 
 
