@@ -10,7 +10,7 @@ $(document).ready(function() {
       var caratteristiche = data.results;
       /*for (i=0; i<caratteristiche.length; i++) {
         var autore = caratteristiche[i].author;*/
-        console.log(caratteristiche);
+      datiBrano(caratteristiche);
 
     },
     error: function (richiesta, stato, errori) {
@@ -20,8 +20,12 @@ $(document).ready(function() {
 
 
 function datiBrano(songs) {
-
+  for (i=0; i<=songs.length; i++) {
+    console.log(songs[i]);
+  }
 }
+
+
 
 
 
