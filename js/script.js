@@ -36,16 +36,6 @@ function datiBrano(songs) {
     var contenuto = template(cd);
 
     $(".cds-container").append(contenuto);
-
-    // Generi Musicali
-    $(document).on("click", ".cd", function() {
-      var x = $(this).attr("data-gen");
-      console.log(x);
-    });
-
-
-
-
   }
 }
 
