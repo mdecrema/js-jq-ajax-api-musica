@@ -1,17 +1,10 @@
 $(document).ready(function() {
 
-
-  // PROVA
-
     $.ajax({
     url: "https://flynn.boolean.careers/exercises/api/array/music",
     method: "GET",
     success: function (data, stato) {
       var caratteristiche = data.response;
-      console.log(caratteristiche);
-      /*for (i=0; i<caratteristiche.length; i++) {
-        var autore = caratteristiche[i].author;*/
-
       // Richiamo la funzione 'datiBrano' e gli passo l'argomento
       datiBrano(caratteristiche);
     },
@@ -25,6 +18,7 @@ function datiBrano(songs) {
   for (i=0; i<=songs.length; i++) {
     let canzone = songs[i];
 
+// Creo un oggetto con un richiamo alle varie caratteristiche
     var cd = {
       "cd": "cd",
       "img": canzone.poster,
@@ -33,6 +27,7 @@ function datiBrano(songs) {
       "year": canzone.year
     }
 
+// Vado a inserire tutto nel tamplate e lo invio all'html
     var source = $("#entry-template").html();
     var template = Handlebars.compile(source);
 
